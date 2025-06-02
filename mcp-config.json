@@ -1,0 +1,71 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem"
+      ],
+      "env": {
+        "ALLOWED_DIRECTORIES": "/workspaces,/workspaces/adk_dev_trial/adk-python,/workspaces/adk_dev_trial/adk-docs"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "network-discovery": {
+      "command": "python",
+      "args": [
+        "-m",
+        "network_discovery_mcp.server"
+      ],
+      "cwd": "/workspaces/adk_dev_trial/network_discovery_mcp",
+      "env": {}
+    }
+  },
+  "description": "MCP configuration for Google ADK Python repository access, documentation, and network device discovery",
+  "notes": {
+    "working_servers": {
+      "filesystem": "Provides access to Google ADK Python repository at /workspaces/adk_dev_trial/adk-python and documentation at /workspaces/adk_dev_trial/adk-docs",
+      "github": "Access to GitHub repositories and documentation - requires GITHUB_TOKEN environment variable",
+      "network-discovery": "Custom MCP server for local area network device discovery and identification - provides network scanning capabilities"
+    },
+    "removed_servers": {
+      "reason": "The following servers were removed because they are not available in the npm registry as of June 2025",
+      "list": [
+        "git",
+        "brave-search",
+        "web-search",
+        "fetch",
+        "shell",
+        "python",
+        "docker",
+        "postgres",
+        "sqlite",
+        "slack",
+        "sentry",
+        "puppeteer",
+        "everart",
+        "memory",
+        "sequential-thinking",
+        "time",
+        "youtube-transcript"
+      ]
+    },
+    "usage": {
+      "filesystem": "Add your Python repository paths to ALLOWED_DIRECTORIES environment variable",
+      "github": "Set GITHUB_TOKEN environment variable for repository access",
+      "network-discovery": "Custom network discovery server - provides tools for scanning local networks, identifying devices, and discovering services"
+    },
+    "environment_variables": [
+      "GITHUB_TOKEN - GitHub personal access token for repository access"
+    ]
+  }
+}
