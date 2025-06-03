@@ -39,7 +39,6 @@ dev = [
     "pytest-cov>=4.0.0",
     "black>=23.0.0",
     "ruff>=0.1.0",
-    "mypy>=1.0.0",
 ]
 
 [project.scripts]
@@ -54,6 +53,9 @@ addopts = [
     "--cov=network_discovery_mcp",
     "--cov-report=term-missing",
 ]
+markers = [
+    "asyncio: marks tests as requiring asyncio",
+]
 
 [tool.black]
 line-length = 88
@@ -66,9 +68,3 @@ target-version = "py310"
 [tool.ruff.lint]
 select = ["E", "W", "F", "UP", "B", "SIM", "I"]
 ignore = ["E501"]
-
-[tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true

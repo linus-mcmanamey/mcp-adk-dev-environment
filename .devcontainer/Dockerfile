@@ -74,7 +74,7 @@ RUN uv pip install --system --no-cache \
     # Keep essential tools for global access
     pytest \
     pydantic \
-    mypy
+    anthropic
 
 # Set working directory
 WORKDIR /workspace

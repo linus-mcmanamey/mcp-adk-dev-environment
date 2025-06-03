@@ -43,8 +43,6 @@ pytest-asyncio>=0.21.0
 pytest-cov>=4.1.0
 pre-commit>=3.4.0
 ruff>=0.1.0
-black>=23.7.0
-mypy>=1.5.0
 
 # Async and Concurrency
 aiohttp>=3.8.0
@@ -52,7 +50,6 @@ aiofiles>=23.0.0
 
 # Configuration and Environment Management
 python-dotenv>=1.0.0
-pydantic>=2.0.0
 pydantic-settings>=2.0.0
 
 # Logging and Monitoring
@@ -76,7 +73,7 @@ pyyaml>=6.0.0
 # Database Connectivity
 sqlalchemy>=2.0.0
 psycopg2-binary>=2.9.0
-sqlmodel>=1.0.0
+sqlmodel
 # Jupyter for Development
 jupyter>=1.0.0
 jupyterlab>=4.0.0
